@@ -1,10 +1,10 @@
 {
-    "buildCommand": "composer install && npm install && npm run build && php artisan optimize",
-    "outputDirectory": "public",
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.6.0"
         }
     },
-    "routes": [{ "src": "/(.*)", "dest": "public/index.php" }]
+    "routes": [{ "src": "/(.*)", "dest": "public/index.php" }],
+    "buildCommand": "npm install && npm run build",
+    "outputDirectory": "public"
 }
